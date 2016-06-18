@@ -1,4 +1,4 @@
-package org.antennae.client.beans;
+package org.antennae.common.beans;
 
 import com.google.gson.Gson;
 

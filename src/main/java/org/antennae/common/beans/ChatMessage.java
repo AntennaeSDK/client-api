@@ -1,4 +1,4 @@
-package org.antennae.client.beans;
+package org.antennae.common.beans;
 
 import java.util.Date;
 
