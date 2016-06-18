@@ -115,12 +115,6 @@ target
 *.iml
 *.ipr
 
-ebay.log
-MANIFEST.MF
 *.bash_profile
 *.DS_Store
-src/main/webapp/
 client-api.iml
-pom.xml
-src/main/resources/
-src/test/
