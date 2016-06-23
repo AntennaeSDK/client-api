@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.antennae.commons</groupId>
-	<artifactId>common-api</artifactId>
+	<groupId>org.antennae.common</groupId>
+	<artifactId>client-api</artifactId>
 	<version>0.1.6</version>
 	<packaging>jar</packaging>
 
 	<name>common-api</name>
-	<description>classes that are shared between server and client libraries</description>
+	<description>classes that are needed for the android client</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
