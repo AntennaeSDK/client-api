@@ -21,15 +21,11 @@ import com.google.gson.Gson;
 /**
  * Created by snambi on 6/21/16.
  */
-public class Message {
+public class ServerMessage {
 
     // from where the message originates.
     // it can be from a user or from a server (bot)
     private ClientAddress from;
-
-    // to where it is supposed to reach.
-    // mainly used for directing the message to an user or app(s)
-    private ServerAddress to;
 
     // topic is used to direct the message on the server-side
     private String topic;
@@ -45,12 +41,6 @@ public class Message {
     }
     public void setFrom(ClientAddress from) {
         this.from = from;
-    }
-    public ServerAddress getTo() {
-        return to;
-    }
-    public void setTo(ServerAddress to) {
-        this.to = to;
     }
     public String getTopic() {
         return topic;
@@ -77,9 +67,9 @@ public class Message {
         return json;
     }
 
-    public static Message fromJson(String json ){
+    public static ServerMessage fromJson(String json ){
         Gson gson = new Gson();
-        Message result = gson.fromJson( json, Message.class);
+        ServerMessage result = gson.fromJson( json, ServerMessage.class);
         return result;
     }
 }
