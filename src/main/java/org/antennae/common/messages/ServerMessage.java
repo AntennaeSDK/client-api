@@ -34,7 +34,7 @@ public class ServerMessage {
     private String payLoad;
 
     // message type
-    private MessageTypeEnum messageType = MessageTypeEnum.PUB_SUB;
+    private ServerMessageTypeEnum messageType = ServerMessageTypeEnum.PUB_SUB;
 
     public ClientAddress getFrom() {
         return from;
@@ -54,10 +54,10 @@ public class ServerMessage {
     public void setPayLoad(String payLoad) {
         this.payLoad = payLoad;
     }
-    public MessageTypeEnum getMessageType() {
+    public ServerMessageTypeEnum getMessageType() {
         return messageType;
     }
-    public void setMessageType(MessageTypeEnum messageType) {
+    public void setMessageType(ServerMessageTypeEnum messageType) {
         this.messageType = messageType;
     }
 

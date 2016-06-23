@@ -16,7 +16,7 @@
 package org.antennae.common.messages;
 
 /**
- * <code>MessageTypeEnum</code> defines the three types of messages.
+ * <code>ServerMessageTypeEnum</code> defines the three types of messages.
  *
  * <ol>
  *     <li>Point to point</li>
@@ -26,8 +26,7 @@ package org.antennae.common.messages;
  *
  *
  */
-public enum MessageTypeEnum {
-    POINT_TO_POINT,
+public enum ServerMessageTypeEnum {
     REQUEST_RESPONSE,
     PUB_SUB;
 }
