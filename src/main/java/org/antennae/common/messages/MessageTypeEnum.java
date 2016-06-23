@@ -13,11 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package org.antennae.common.beans;
+package org.antennae.common.messages;
 
 /**
- * Created by snambi on 6/17/16.
+ * <code>MessageTypeEnum</code> defines the three types of messages.
+ *
+ * <ol>
+ *     <li>Point to point</li>
+ *     <li>Request response</li>
+ *     <li>publish and subscribe</li>
+ * </ol>
+ *
+ *
  */
-public class Message {
+public enum MessageTypeEnum {
+    POINT_TO_POINT,
+    REQUEST_RESPONSE,
+    PUB_SUB;
 }
