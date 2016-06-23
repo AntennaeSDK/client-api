@@ -14,6 +14,21 @@ public class ClientMessage {
     // actual message
     private String payLoad;
 
+
+    public ClientAddress getTo() {
+        return to;
+    }
+    public void setTo(ClientAddress to) {
+        this.to = to;
+    }
+    public String getPayLoad() {
+        return payLoad;
+    }
+    public void setPayLoad(String payLoad) {
+        this.payLoad = payLoad;
+    }
+
+
     public String toJson(){
         Gson gson = new Gson();
         String json = gson.toJson(this);
