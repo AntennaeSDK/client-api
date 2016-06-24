@@ -1,5 +1,6 @@
 package org.antennae.common.messages.util;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -9,8 +10,15 @@ public class JsonUtil {
 
     public static String identifyClassType( String json  ){
 
-        JSONObject jsonObject = new JSONObject(json);
-        String classtype = (String) jsonObject.get("classType");
+        String classtype =null;
+        try {
+
+            JSONObject jsonObject = new JSONObject(json);
+            classtype = (String) jsonObject.get("classType");
+
+        }catch( JSONException e){
+
+        }
 
         return classtype;
     }
