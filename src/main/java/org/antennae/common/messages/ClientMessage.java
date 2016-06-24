@@ -9,7 +9,7 @@ import java.util.UUID;
  * <code>ClientMessage</code> is sent to a client.
  * A client is a mobile-app or IOT app.
  * OR it could be an user on several devices.
- * @See ClientAddress for more details.
+ * @see ClientAddress for more details.
  */
 public class ClientMessage {
 

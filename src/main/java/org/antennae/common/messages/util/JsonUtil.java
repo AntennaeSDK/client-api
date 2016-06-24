@@ -11,7 +11,7 @@ public class JsonUtil {
 
         JSONObject jsonObject = new JSONObject(json);
         String classtype = (String) jsonObject.get("classType");
-        return classtype;
 
+        return classtype;
     }
 }
