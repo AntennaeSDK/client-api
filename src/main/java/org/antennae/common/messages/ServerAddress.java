@@ -27,6 +27,9 @@ public class ServerAddress {
 
     private String topic;
 
+    // TODO: use TypeAdapterFactory instead of passing the type.
+    private String classType = ServerAddress.class.getName();
+
     public String getTopic() {
         return topic;
     }

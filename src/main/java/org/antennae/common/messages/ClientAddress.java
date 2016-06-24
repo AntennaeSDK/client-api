@@ -21,23 +21,33 @@ import java.util.UUID;
 
 
 /**
- * Created by snambi on 6/21/16.
+ * A client can addressed by many methods.
+ * Any one of the following is valid.
+ * The messaging broker will attempt to deliver the message based on the address-data and message-quality.
+ *
+ * <ol>
+ *     <li>User</li>
+ *     <li>DeviceId, AppName </li>
+ *     <li>User, DeviceId, AppName </li>
+ *     <li>DeviceId, AppName, AppVersion</li>
+ *     <li>User, DeviceId, AppName, AppVersion</li>
+ * </ol>
+ *
+ * @see ClientMessage
  */
 public class ClientAddress {
 
+    //
     private String appName;
     private String appVersion;
     private String deviceId;
     private String user;
 
-    // TODO: this should be part of the message
-    private String requestId; // for every request generate an Unique ID
+    // TODO: use TypeAdapterFactory instead of passing the type.
+    private String classType = ClientAddress.class.getName();
+
 
     public ClientAddress(){
-        requestId = UUID.randomUUID().toString();
-    }
-    public ClientAddress(String uniqueRequestId ){
-        this.requestId = uniqueRequestId;
     }
     public String getUser() {
         return user;
@@ -62,9 +72,6 @@ public class ClientAddress {
     }
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
-    }
-    public String getRequestId() {
-        return requestId;
     }
 
     public String toJson(){

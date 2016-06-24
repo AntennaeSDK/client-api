@@ -1,6 +1,7 @@
 package org.antennae.common.messages;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.UUID;
 
@@ -36,6 +37,8 @@ public class ServerRestMessage {
     // unique identified to track the request on the client side.
     private String requestId;
 
+    // TODO: use TypeAdapterFactory instead of passing the type.
+    private String classType = ServerRestMessage.class.getName();
 
     // getters and setters
     public ServerRestMessage(){
@@ -84,6 +87,11 @@ public class ServerRestMessage {
     // utility methods
     public String toJson(){
         Gson gson = new Gson();
+        String json = gson.toJson(this);
+        return json;
+    }
+    public String toJsonPretty(){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(this);
         return json;
     }

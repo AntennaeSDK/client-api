@@ -24,7 +24,7 @@ public class ClientMessageTest {
 
         clientMessage.setTo( clientAddress );
 
-        String json = clientMessage.toJson();
+        String json = clientMessage.toJsonPretty();
 
         System.out.println("JSON: \n" + json );
 

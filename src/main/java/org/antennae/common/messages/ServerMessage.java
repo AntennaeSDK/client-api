@@ -17,6 +17,8 @@
 package org.antennae.common.messages;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.sun.corba.se.spi.activation.Server;
 
 /**
  * Created by snambi on 6/21/16.
@@ -35,6 +37,9 @@ public class ServerMessage {
 
     // message type
     private ServerMessageTypeEnum messageType = ServerMessageTypeEnum.PUB_SUB;
+
+    // TODO: use TypeAdapterFactory instead of passing the type.
+    private String classType = ServerMessage.class.getName();
 
     public ClientAddress getFrom() {
         return from;
@@ -66,7 +71,11 @@ public class ServerMessage {
         String json = gson.toJson(this);
         return json;
     }
-
+    public String toJsonPretty(){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(this);
+        return json;
+    }
     public static ServerMessage fromJson(String json ){
         Gson gson = new Gson();
         ServerMessage result = gson.fromJson( json, ServerMessage.class);
