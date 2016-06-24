@@ -6,7 +6,7 @@ import com.google.gson.Gson;
  * <code>ServerRestMessage</code> carries a REST api call to the mobile-broker.
  * Broker executes this call, and returns the result via <code>ClientMessage</code>.
  *
- * <see>ClientMessage</see>
+ * @see ClientMessage
  */
 public class ServerRestMessage {
 
