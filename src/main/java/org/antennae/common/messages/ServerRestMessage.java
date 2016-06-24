@@ -6,7 +6,7 @@ import com.google.gson.Gson;
  * <code>ServerRestMessage</code> carries a REST api call to the mobile-broker.
  * Broker executes this call, and returns the result via <code>ClientMessage</code>.
  *
- * @See( ClientMessage)
+ * <see>ClientMessage</see>
  */
 public class ServerRestMessage {
 
@@ -39,47 +39,36 @@ public class ServerRestMessage {
     public ClientAddress getFrom() {
         return from;
     }
-
     public void setFrom(ClientAddress from) {
         this.from = from;
     }
-
     public String getPath() {
         return path;
     }
-
     public void setPath(String path) {
         this.path = path;
     }
-
     public String getHost() {
         return host;
     }
-
     public void setHost(String host) {
         this.host = host;
     }
-
     public String getMethod() {
         return method;
     }
-
     public void setMethod(String method) {
         this.method = method;
     }
-
     public String getPayLoad() {
         return payLoad;
     }
-
     public void setPayLoad(String payLoad) {
         this.payLoad = payLoad;
     }
-
     public String getRequestId() {
         return requestId;
     }
-
     public void setRequestId(String requestId) {
         this.requestId = requestId;
     }
@@ -90,7 +79,6 @@ public class ServerRestMessage {
         String json = gson.toJson(this);
         return json;
     }
-
     public static ServerRestMessage fromJson(String json ){
         Gson gson = new Gson();
         ServerRestMessage result = gson.fromJson( json, ServerRestMessage.class);
