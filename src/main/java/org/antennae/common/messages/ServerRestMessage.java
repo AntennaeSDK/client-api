@@ -2,6 +2,8 @@ package org.antennae.common.messages;
 
 import com.google.gson.Gson;
 
+import java.util.UUID;
+
 /**
  * <code>ServerRestMessage</code> carries a REST api call to the mobile-broker.
  * Broker executes this call, and returns the result via <code>ClientMessage</code>.
@@ -36,6 +38,12 @@ public class ServerRestMessage {
 
 
     // getters and setters
+    public ServerRestMessage(){
+        requestId = UUID.randomUUID().toString();
+    }
+    public ServerRestMessage( String requestId ){
+        this.requestId = requestId;
+    }
     public ClientAddress getFrom() {
         return from;
     }

@@ -66,9 +66,6 @@ public class ClientAddress {
     public String getRequestId() {
         return requestId;
     }
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
-    }
 
     public String toJson(){
         Gson gson = new Gson();
