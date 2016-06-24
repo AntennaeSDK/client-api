@@ -37,23 +37,14 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 
-		<!-- json can removed when we move out of parse -->
-		<!--
+
 		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20141113</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
-		-->
-		
-		<!-- migrate the code to use json for dealing with smack -->
-		<!--
-		<dependency>
-			<groupId>com.googlecode.json-simple</groupId>
-			<artifactId>json-simple</artifactId>
-		</dependency>
-		-->
-		
+
 	</dependencies>
 
 	<build>

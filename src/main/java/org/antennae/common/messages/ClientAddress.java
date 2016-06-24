@@ -29,6 +29,8 @@ public class ClientAddress {
     private String appVersion;
     private String deviceId;
     private String user;
+
+    // TODO: this should be part of the message
     private String requestId; // for every request generate an Unique ID
 
     public ClientAddress(){
